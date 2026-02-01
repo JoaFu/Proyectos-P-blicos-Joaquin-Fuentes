@@ -16,7 +16,6 @@ El proyecto implementa circuitos de control basados en el temporizador 555, puen
 - Control de velocidad mediante señales PWM
 - Inversión de dirección de marcha (adelante/atrás)
 - Sistema de dirección controlable en 180°
-- Suspensión activa con capacidad de elevación
 - Operación independiente de todos los motores sin interferencias
 - Chasis diseñado en CAD y fabricado en MDF
 
