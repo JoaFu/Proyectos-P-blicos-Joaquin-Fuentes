@@ -1,0 +1,898 @@
+
+Slave2_Casillero_Inteligente.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00800100  000005a2  00000636  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000005a2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000015  00800102  00800102  00000638  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000638  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000668  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000168  00000000  00000000  000006a8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000012d6  00000000  00000000  00000810  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000a84  00000000  00000000  00001ae6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000c4d  00000000  00000000  0000256a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000364  00000000  00000000  000031b8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000770  00000000  00000000  0000351c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000c1e  00000000  00000000  00003c8c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000158  00000000  00000000  000048aa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 9d 00 	jmp	0x13a	; 0x13a <__ctors_end>
+   4:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+   8:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+   c:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  10:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  14:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  18:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  1c:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  20:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  24:	0c 94 bc 00 	jmp	0x178	; 0x178 <__vector_9>
+  28:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  2c:	0c 94 5e 02 	jmp	0x4bc	; 0x4bc <__vector_11>
+  30:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  34:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  38:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  3c:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  40:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  44:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  48:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  4c:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  50:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  54:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  58:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  5c:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  60:	0c 94 e9 00 	jmp	0x1d2	; 0x1d2 <__vector_24>
+  64:	0c 94 ba 00 	jmp	0x174	; 0x174 <__bad_interrupt>
+  68:	08 01       	movw	r0, r16
+  6a:	6b 01       	movw	r12, r22
+  6c:	6b 01       	movw	r12, r22
+  6e:	6b 01       	movw	r12, r22
+  70:	6b 01       	movw	r12, r22
+  72:	6b 01       	movw	r12, r22
+  74:	6b 01       	movw	r12, r22
+  76:	6b 01       	movw	r12, r22
+  78:	6b 01       	movw	r12, r22
+  7a:	6b 01       	movw	r12, r22
+  7c:	6b 01       	movw	r12, r22
+  7e:	6b 01       	movw	r12, r22
+  80:	6b 01       	movw	r12, r22
+  82:	6b 01       	movw	r12, r22
+  84:	6b 01       	movw	r12, r22
+  86:	6b 01       	movw	r12, r22
+  88:	08 01       	movw	r0, r16
+  8a:	6b 01       	movw	r12, r22
+  8c:	6b 01       	movw	r12, r22
+  8e:	6b 01       	movw	r12, r22
+  90:	6b 01       	movw	r12, r22
+  92:	6b 01       	movw	r12, r22
+  94:	6b 01       	movw	r12, r22
+  96:	6b 01       	movw	r12, r22
+  98:	6b 01       	movw	r12, r22
+  9a:	6b 01       	movw	r12, r22
+  9c:	6b 01       	movw	r12, r22
+  9e:	6b 01       	movw	r12, r22
+  a0:	6b 01       	movw	r12, r22
+  a2:	6b 01       	movw	r12, r22
+  a4:	6b 01       	movw	r12, r22
+  a6:	6b 01       	movw	r12, r22
+  a8:	0f 01       	movw	r0, r30
+  aa:	6b 01       	movw	r12, r22
+  ac:	6b 01       	movw	r12, r22
+  ae:	6b 01       	movw	r12, r22
+  b0:	6b 01       	movw	r12, r22
+  b2:	6b 01       	movw	r12, r22
+  b4:	6b 01       	movw	r12, r22
+  b6:	6b 01       	movw	r12, r22
+  b8:	3c 01       	movw	r6, r24
+  ba:	6b 01       	movw	r12, r22
+  bc:	6b 01       	movw	r12, r22
+  be:	6b 01       	movw	r12, r22
+  c0:	6b 01       	movw	r12, r22
+  c2:	6b 01       	movw	r12, r22
+  c4:	6b 01       	movw	r12, r22
+  c6:	6b 01       	movw	r12, r22
+  c8:	0f 01       	movw	r0, r30
+  ca:	6b 01       	movw	r12, r22
+  cc:	6b 01       	movw	r12, r22
+  ce:	6b 01       	movw	r12, r22
+  d0:	6b 01       	movw	r12, r22
+  d2:	6b 01       	movw	r12, r22
+  d4:	6b 01       	movw	r12, r22
+  d6:	6b 01       	movw	r12, r22
+  d8:	3c 01       	movw	r6, r24
+  da:	6b 01       	movw	r12, r22
+  dc:	6b 01       	movw	r12, r22
+  de:	6b 01       	movw	r12, r22
+  e0:	6b 01       	movw	r12, r22
+  e2:	6b 01       	movw	r12, r22
+  e4:	6b 01       	movw	r12, r22
+  e6:	6b 01       	movw	r12, r22
+  e8:	3c 01       	movw	r6, r24
+  ea:	6b 01       	movw	r12, r22
+  ec:	6b 01       	movw	r12, r22
+  ee:	6b 01       	movw	r12, r22
+  f0:	6b 01       	movw	r12, r22
+  f2:	6b 01       	movw	r12, r22
+  f4:	6b 01       	movw	r12, r22
+  f6:	6b 01       	movw	r12, r22
+  f8:	43 01       	movw	r8, r6
+  fa:	6b 01       	movw	r12, r22
+  fc:	6b 01       	movw	r12, r22
+  fe:	6b 01       	movw	r12, r22
+ 100:	6b 01       	movw	r12, r22
+ 102:	6b 01       	movw	r12, r22
+ 104:	6b 01       	movw	r12, r22
+ 106:	6b 01       	movw	r12, r22
+ 108:	6b 01       	movw	r12, r22
+ 10a:	6b 01       	movw	r12, r22
+ 10c:	6b 01       	movw	r12, r22
+ 10e:	6b 01       	movw	r12, r22
+ 110:	6b 01       	movw	r12, r22
+ 112:	6b 01       	movw	r12, r22
+ 114:	6b 01       	movw	r12, r22
+ 116:	6b 01       	movw	r12, r22
+ 118:	43 01       	movw	r8, r6
+ 11a:	6b 01       	movw	r12, r22
+ 11c:	6b 01       	movw	r12, r22
+ 11e:	6b 01       	movw	r12, r22
+ 120:	6b 01       	movw	r12, r22
+ 122:	6b 01       	movw	r12, r22
+ 124:	6b 01       	movw	r12, r22
+ 126:	6b 01       	movw	r12, r22
+ 128:	64 01       	movw	r12, r8
+ 12a:	6b 01       	movw	r12, r22
+ 12c:	6b 01       	movw	r12, r22
+ 12e:	6b 01       	movw	r12, r22
+ 130:	6b 01       	movw	r12, r22
+ 132:	6b 01       	movw	r12, r22
+ 134:	6b 01       	movw	r12, r22
+ 136:	6b 01       	movw	r12, r22
+ 138:	64 01       	movw	r12, r8
+
+0000013a <__ctors_end>:
+ 13a:	11 24       	eor	r1, r1
+ 13c:	1f be       	out	0x3f, r1	; 63
+ 13e:	cf ef       	ldi	r28, 0xFF	; 255
+ 140:	d8 e0       	ldi	r29, 0x08	; 8
+ 142:	de bf       	out	0x3e, r29	; 62
+ 144:	cd bf       	out	0x3d, r28	; 61
+
+00000146 <__do_copy_data>:
+ 146:	11 e0       	ldi	r17, 0x01	; 1
+ 148:	a0 e0       	ldi	r26, 0x00	; 0
+ 14a:	b1 e0       	ldi	r27, 0x01	; 1
+ 14c:	e2 ea       	ldi	r30, 0xA2	; 162
+ 14e:	f5 e0       	ldi	r31, 0x05	; 5
+ 150:	02 c0       	rjmp	.+4      	; 0x156 <__do_copy_data+0x10>
+ 152:	05 90       	lpm	r0, Z+
+ 154:	0d 92       	st	X+, r0
+ 156:	a2 30       	cpi	r26, 0x02	; 2
+ 158:	b1 07       	cpc	r27, r17
+ 15a:	d9 f7       	brne	.-10     	; 0x152 <__do_copy_data+0xc>
+
+0000015c <__do_clear_bss>:
+ 15c:	21 e0       	ldi	r18, 0x01	; 1
+ 15e:	a2 e0       	ldi	r26, 0x02	; 2
+ 160:	b1 e0       	ldi	r27, 0x01	; 1
+ 162:	01 c0       	rjmp	.+2      	; 0x166 <.do_clear_bss_start>
+
+00000164 <.do_clear_bss_loop>:
+ 164:	1d 92       	st	X+, r1
+
+00000166 <.do_clear_bss_start>:
+ 166:	a7 31       	cpi	r26, 0x17	; 23
+ 168:	b2 07       	cpc	r27, r18
+ 16a:	e1 f7       	brne	.-8      	; 0x164 <.do_clear_bss_loop>
+ 16c:	0e 94 c8 01 	call	0x390	; 0x390 <main>
+ 170:	0c 94 cf 02 	jmp	0x59e	; 0x59e <_exit>
+
+00000174 <__bad_interrupt>:
+ 174:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000178 <__vector_9>:
+
+// Contador de overflows de Timer2, extiende TCNT2 (8 bits) a ~24 bits
+static volatile uint16_t overflow_count = 0;
+
+ISR(TIMER2_OVF_vect)
+{
+ 178:	1f 92       	push	r1
+ 17a:	0f 92       	push	r0
+ 17c:	0f b6       	in	r0, 0x3f	; 63
+ 17e:	0f 92       	push	r0
+ 180:	11 24       	eor	r1, r1
+ 182:	8f 93       	push	r24
+ 184:	9f 93       	push	r25
+	overflow_count++;
+ 186:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <__data_end>
+ 18a:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <__data_end+0x1>
+ 18e:	01 96       	adiw	r24, 0x01	; 1
+ 190:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <__data_end+0x1>
+ 194:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <__data_end>
+}
+ 198:	9f 91       	pop	r25
+ 19a:	8f 91       	pop	r24
+ 19c:	0f 90       	pop	r0
+ 19e:	0f be       	out	0x3f, r0	; 63
+ 1a0:	0f 90       	pop	r0
+ 1a2:	1f 90       	pop	r1
+ 1a4:	18 95       	reti
+
+000001a6 <i2c_get_status>:
+                // Reinicia el reconocimiento
+                TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA);
+                break;
+        }
+    }
+}
+ 1a6:	80 91 b9 00 	lds	r24, 0x00B9	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7f80b9>
+ 1aa:	88 7f       	andi	r24, 0xF8	; 248
+ 1ac:	08 95       	ret
+
+000001ae <i2c_slave_init_it>:
+static volatile uint8_t  i2c_esperando_indice = 1;
+
+// Configura el esclavo en modo interrupción sobre un mapa de registros propio.
+void i2c_slave_init_it(uint8_t direccion, volatile uint8_t *mapa_registros, uint8_t num_registros)
+{
+    i2c_regs      = mapa_registros;
+ 1ae:	70 93 07 01 	sts	0x0107, r23	; 0x800107 <i2c_regs+0x1>
+ 1b2:	60 93 06 01 	sts	0x0106, r22	; 0x800106 <i2c_regs>
+    i2c_regs_len  = num_registros;
+ 1b6:	40 93 05 01 	sts	0x0105, r20	; 0x800105 <i2c_regs_len>
+    i2c_reg_index = 0;
+ 1ba:	10 92 04 01 	sts	0x0104, r1	; 0x800104 <i2c_reg_index>
+    i2c_esperando_indice = 1;
+ 1be:	91 e0       	ldi	r25, 0x01	; 1
+ 1c0:	90 93 00 01 	sts	0x0100, r25	; 0x800100 <__DATA_REGION_ORIGIN__>
+
+    TWAR = (direccion << 1);
+ 1c4:	88 0f       	add	r24, r24
+ 1c6:	80 93 ba 00 	sts	0x00BA, r24	; 0x8000ba <__TEXT_REGION_LENGTH__+0x7f80ba>
+    TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA) | (1 << TWIE);
+ 1ca:	85 ec       	ldi	r24, 0xC5	; 197
+ 1cc:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 1d0:	08 95       	ret
+
+000001d2 <__vector_24>:
+}
+
+ISR(TWI_vect)
+{
+ 1d2:	1f 92       	push	r1
+ 1d4:	0f 92       	push	r0
+ 1d6:	0f b6       	in	r0, 0x3f	; 63
+ 1d8:	0f 92       	push	r0
+ 1da:	11 24       	eor	r1, r1
+ 1dc:	2f 93       	push	r18
+ 1de:	3f 93       	push	r19
+ 1e0:	4f 93       	push	r20
+ 1e2:	5f 93       	push	r21
+ 1e4:	6f 93       	push	r22
+ 1e6:	7f 93       	push	r23
+ 1e8:	8f 93       	push	r24
+ 1ea:	9f 93       	push	r25
+ 1ec:	af 93       	push	r26
+ 1ee:	bf 93       	push	r27
+ 1f0:	ef 93       	push	r30
+ 1f2:	ff 93       	push	r31
+    uint8_t status = i2c_get_status();
+ 1f4:	0e 94 d3 00 	call	0x1a6	; 0x1a6 <i2c_get_status>
+
+    switch (status)
+ 1f8:	90 e0       	ldi	r25, 0x00	; 0
+ 1fa:	fc 01       	movw	r30, r24
+ 1fc:	e0 56       	subi	r30, 0x60	; 96
+ 1fe:	f1 09       	sbc	r31, r1
+ 200:	e9 36       	cpi	r30, 0x69	; 105
+ 202:	f1 05       	cpc	r31, r1
+ 204:	08 f0       	brcs	.+2      	; 0x208 <__vector_24+0x36>
+ 206:	67 c0       	rjmp	.+206    	; 0x2d6 <__vector_24+0x104>
+ 208:	ec 5c       	subi	r30, 0xCC	; 204
+ 20a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 20c:	0c 94 af 02 	jmp	0x55e	; 0x55e <__tablejump2__>
+    {
+        /* ---- Modo receptor: el Master escribe ---- */
+        case TW_SR_SLA_ACK:
+        case TW_SR_GCALL_ACK:
+
+            i2c_esperando_indice = 1;
+ 210:	81 e0       	ldi	r24, 0x01	; 1
+ 212:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+            TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA) | (1 << TWIE);
+ 216:	85 ec       	ldi	r24, 0xC5	; 197
+ 218:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+            break;
+ 21c:	62 c0       	rjmp	.+196    	; 0x2e2 <__vector_24+0x110>
+
+        case TW_SR_DATA_ACK:
+        case TW_SR_GCALL_DATA_ACK:
+
+            if (i2c_esperando_indice)
+ 21e:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 222:	88 23       	and	r24, r24
+ 224:	79 f0       	breq	.+30     	; 0x244 <__vector_24+0x72>
+            {
+                // Primer byte de la transacción: indice de registro
+                i2c_reg_index = (TWDR < i2c_regs_len) ? TWDR : 0;
+ 226:	90 91 bb 00 	lds	r25, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 22a:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <i2c_regs_len>
+ 22e:	98 17       	cp	r25, r24
+ 230:	18 f4       	brcc	.+6      	; 0x238 <__vector_24+0x66>
+ 232:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 236:	01 c0       	rjmp	.+2      	; 0x23a <__vector_24+0x68>
+ 238:	80 e0       	ldi	r24, 0x00	; 0
+ 23a:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <i2c_reg_index>
+                i2c_esperando_indice = 0;
+ 23e:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 242:	16 c0       	rjmp	.+44     	; 0x270 <__vector_24+0x9e>
+            }
+            else if (i2c_reg_index < i2c_regs_len)
+ 244:	90 91 04 01 	lds	r25, 0x0104	; 0x800104 <i2c_reg_index>
+ 248:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <i2c_regs_len>
+ 24c:	98 17       	cp	r25, r24
+ 24e:	80 f4       	brcc	.+32     	; 0x270 <__vector_24+0x9e>
+            {
+                i2c_regs[i2c_reg_index] = TWDR;
+ 250:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <i2c_reg_index>
+ 254:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <i2c_regs>
+ 258:	f0 91 07 01 	lds	r31, 0x0107	; 0x800107 <i2c_regs+0x1>
+ 25c:	e8 0f       	add	r30, r24
+ 25e:	f1 1d       	adc	r31, r1
+ 260:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 264:	80 83       	st	Z, r24
+                i2c_reg_index++;
+ 266:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <i2c_reg_index>
+ 26a:	8f 5f       	subi	r24, 0xFF	; 255
+ 26c:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <i2c_reg_index>
+            }
+
+            TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA) | (1 << TWIE);
+ 270:	85 ec       	ldi	r24, 0xC5	; 197
+ 272:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+            break;
+ 276:	35 c0       	rjmp	.+106    	; 0x2e2 <__vector_24+0x110>
+
+        case TW_SR_STOP:
+        case TW_SR_DATA_NACK:
+        case TW_SR_GCALL_DATA_NACK:
+
+            i2c_esperando_indice = 1;
+ 278:	81 e0       	ldi	r24, 0x01	; 1
+ 27a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+            TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA) | (1 << TWIE);
+ 27e:	85 ec       	ldi	r24, 0xC5	; 197
+ 280:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+            break;
+ 284:	2e c0       	rjmp	.+92     	; 0x2e2 <__vector_24+0x110>
+
+        /* ---- Modo transmisor: el Master lee ---- */
+        case TW_ST_SLA_ACK:
+        case TW_ST_DATA_ACK:
+
+            if (i2c_reg_index < i2c_regs_len)
+ 286:	90 91 04 01 	lds	r25, 0x0104	; 0x800104 <i2c_reg_index>
+ 28a:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <i2c_regs_len>
+ 28e:	98 17       	cp	r25, r24
+ 290:	a0 f4       	brcc	.+40     	; 0x2ba <__vector_24+0xe8>
+            {
+                TWDR = i2c_regs[i2c_reg_index];
+ 292:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <i2c_reg_index>
+ 296:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <i2c_regs>
+ 29a:	f0 91 07 01 	lds	r31, 0x0107	; 0x800107 <i2c_regs+0x1>
+ 29e:	e8 0f       	add	r30, r24
+ 2a0:	f1 1d       	adc	r31, r1
+ 2a2:	80 81       	ld	r24, Z
+ 2a4:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+                i2c_reg_index++;
+ 2a8:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <i2c_reg_index>
+ 2ac:	8f 5f       	subi	r24, 0xFF	; 255
+ 2ae:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <i2c_reg_index>
+                TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA) | (1 << TWIE);
+ 2b2:	85 ec       	ldi	r24, 0xC5	; 197
+ 2b4:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 2b8:	14 c0       	rjmp	.+40     	; 0x2e2 <__vector_24+0x110>
+            }
+            else
+            {
+                TWDR = 0xFF; // Fuera de rango
+ 2ba:	8f ef       	ldi	r24, 0xFF	; 255
+ 2bc:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+                TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWIE);
+ 2c0:	85 e8       	ldi	r24, 0x85	; 133
+ 2c2:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 2c6:	0d c0       	rjmp	.+26     	; 0x2e2 <__vector_24+0x110>
+            break;
+
+        case TW_ST_DATA_NACK:
+        case TW_ST_LAST_DATA:
+
+            i2c_esperando_indice = 1;
+ 2c8:	81 e0       	ldi	r24, 0x01	; 1
+ 2ca:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+            TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA) | (1 << TWIE);
+ 2ce:	85 ec       	ldi	r24, 0xC5	; 197
+ 2d0:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+            break;
+ 2d4:	06 c0       	rjmp	.+12     	; 0x2e2 <__vector_24+0x110>
+
+        /* ---- Estado inesperado: reinicia ---- */
+        default:
+
+            i2c_esperando_indice = 1;
+ 2d6:	81 e0       	ldi	r24, 0x01	; 1
+ 2d8:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+            TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA) | (1 << TWIE);
+ 2dc:	85 ec       	ldi	r24, 0xC5	; 197
+ 2de:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+            break;
+    }
+ 2e2:	ff 91       	pop	r31
+ 2e4:	ef 91       	pop	r30
+ 2e6:	bf 91       	pop	r27
+ 2e8:	af 91       	pop	r26
+ 2ea:	9f 91       	pop	r25
+ 2ec:	8f 91       	pop	r24
+ 2ee:	7f 91       	pop	r23
+ 2f0:	6f 91       	pop	r22
+ 2f2:	5f 91       	pop	r21
+ 2f4:	4f 91       	pop	r20
+ 2f6:	3f 91       	pop	r19
+ 2f8:	2f 91       	pop	r18
+ 2fa:	0f 90       	pop	r0
+ 2fc:	0f be       	out	0x3f, r0	; 63
+ 2fe:	0f 90       	pop	r0
+ 300:	1f 90       	pop	r1
+ 302:	18 95       	reti
+
+00000304 <ActualizarRegistrosI2C>:
+
+
+// Publica el estado actual del carrusel en los registros I2C
+static void ActualizarRegistrosI2C(void)
+{
+    registros_mcu3[REG_POSICION_ACTUAL] = posicion_actual;
+ 304:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <posicion_actual>
+ 308:	eb e0       	ldi	r30, 0x0B	; 11
+ 30a:	f1 e0       	ldi	r31, 0x01	; 1
+ 30c:	84 83       	std	Z+4, r24	; 0x04
+    registros_mcu3[REG_ESTADO_CARRUSEL] = estado_carrusel;
+ 30e:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <estado_carrusel>
+ 312:	85 83       	std	Z+5, r24	; 0x05
+ 314:	08 95       	ret
+
+00000316 <MoverAPosicion>:
+// Subrutinas
+/****************************************/
+
+// Calcula el desplazamiento e inicia el movimiento hacia una posición
+static void MoverAPosicion(uint8_t objetivo)
+{
+ 316:	e8 2f       	mov	r30, r24
+    int32_t pasos;
+
+    if (objetivo >= NUM_POSICIONES)
+ 318:	86 30       	cpi	r24, 0x06	; 6
+ 31a:	e0 f4       	brcc	.+56     	; 0x354 <MoverAPosicion+0x3e>
+        return;
+
+    pasos = ((int32_t)objetivo - (int32_t)posicion_actual)
+ 31c:	48 2f       	mov	r20, r24
+ 31e:	50 e0       	ldi	r21, 0x00	; 0
+ 320:	60 e0       	ldi	r22, 0x00	; 0
+ 322:	70 e0       	ldi	r23, 0x00	; 0
+ 324:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <posicion_actual>
+ 328:	9a 01       	movw	r18, r20
+ 32a:	ab 01       	movw	r20, r22
+ 32c:	28 1b       	sub	r18, r24
+ 32e:	31 09       	sbc	r19, r1
+ 330:	41 09       	sbc	r20, r1
+ 332:	51 09       	sbc	r21, r1
+ 334:	ab ea       	ldi	r26, 0xAB	; 171
+ 336:	b2 e0       	ldi	r27, 0x02	; 2
+ 338:	0e 94 b5 02 	call	0x56a	; 0x56a <__muluhisi3>
+            * PASOS_POR_POSICION;
+
+    if (pasos == 0)
+ 33c:	61 15       	cp	r22, r1
+ 33e:	71 05       	cpc	r23, r1
+ 340:	81 05       	cpc	r24, r1
+ 342:	91 05       	cpc	r25, r1
+ 344:	39 f0       	breq	.+14     	; 0x354 <MoverAPosicion+0x3e>
+        return;
+
+    posicion_objetivo = objetivo;
+ 346:	e0 93 09 01 	sts	0x0109, r30	; 0x800109 <posicion_objetivo>
+
+    Stepper_MoverPasos(pasos);
+ 34a:	0e 94 18 02 	call	0x430	; 0x430 <Stepper_MoverPasos>
+
+    estado_carrusel = CARRUSEL_MOVIENDO;
+ 34e:	81 e0       	ldi	r24, 0x01	; 1
+ 350:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <estado_carrusel>
+ 354:	08 95       	ret
+
+00000356 <HomingCarrusel>:
+
+
+// Inicia el movimiento hasta encontrar la posición de referencia
+static void HomingCarrusel(void)
+{
+    Stepper_MoverPasos(-PASOS_HOMING_MAX);
+ 356:	6c ef       	ldi	r22, 0xFC	; 252
+ 358:	7f ed       	ldi	r23, 0xDF	; 223
+ 35a:	8f ef       	ldi	r24, 0xFF	; 255
+ 35c:	9f ef       	ldi	r25, 0xFF	; 255
+ 35e:	0e 94 18 02 	call	0x430	; 0x430 <Stepper_MoverPasos>
+
+    estado_carrusel = CARRUSEL_HOMING;
+ 362:	82 e0       	ldi	r24, 0x02	; 2
+ 364:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <estado_carrusel>
+ 368:	08 95       	ret
+
+0000036a <ProcesarComandoMaster>:
+
+
+// Interpreta los comandos escritos por el Master mediante I2C
+static void ProcesarComandoMaster(void)
+{
+    uint8_t comando = registros_mcu3[REG_CMD];
+ 36a:	80 91 11 01 	lds	r24, 0x0111	; 0x800111 <registros_mcu3+0x6>
+
+    if (comando == CMD_NINGUNO)
+ 36e:	88 23       	and	r24, r24
+ 370:	71 f0       	breq	.+28     	; 0x38e <ProcesarComandoMaster+0x24>
+        return;
+
+    switch (comando)
+ 372:	81 30       	cpi	r24, 0x01	; 1
+ 374:	19 f0       	breq	.+6      	; 0x37c <ProcesarComandoMaster+0x12>
+ 376:	83 30       	cpi	r24, 0x03	; 3
+ 378:	31 f0       	breq	.+12     	; 0x386 <ProcesarComandoMaster+0x1c>
+ 37a:	07 c0       	rjmp	.+14     	; 0x38a <ProcesarComandoMaster+0x20>
+    {
+        case CMD_IR_POSICION:
+            MoverAPosicion(registros_mcu3[REG_CMD_PARAM]);
+ 37c:	80 91 12 01 	lds	r24, 0x0112	; 0x800112 <registros_mcu3+0x7>
+ 380:	0e 94 8b 01 	call	0x316	; 0x316 <MoverAPosicion>
+            break;
+ 384:	02 c0       	rjmp	.+4      	; 0x38a <ProcesarComandoMaster+0x20>
+
+        case CMD_HOME:
+            HomingCarrusel();
+ 386:	0e 94 ab 01 	call	0x356	; 0x356 <HomingCarrusel>
+
+        default:
+            break;
+    }
+
+    registros_mcu3[REG_CMD] = CMD_NINGUNO;
+ 38a:	10 92 11 01 	sts	0x0111, r1	; 0x800111 <registros_mcu3+0x6>
+ 38e:	08 95       	ret
+
+00000390 <main>:
+/****************************************/
+
+int main(void)
+{
+    // Entrada utilizada para detectar la posición de referencia
+    HOME_DDR &= ~(1 << HOME_BIT);
+ 390:	8a b1       	in	r24, 0x0a	; 10
+ 392:	8f 77       	andi	r24, 0x7F	; 127
+ 394:	8a b9       	out	0x0a, r24	; 10
+
+    Stepper_Init();
+ 396:	0e 94 04 02 	call	0x408	; 0x408 <Stepper_Init>
+
+    i2c_slave_init_it(
+ 39a:	48 e0       	ldi	r20, 0x08	; 8
+ 39c:	6b e0       	ldi	r22, 0x0B	; 11
+ 39e:	71 e0       	ldi	r23, 0x01	; 1
+ 3a0:	81 e1       	ldi	r24, 0x11	; 17
+ 3a2:	0e 94 d7 00 	call	0x1ae	; 0x1ae <i2c_slave_init_it>
+        MCU3_I2C_ADDR,
+        registros_mcu3,
+        NUM_REGISTROS_MCU3
+    );
+
+    posicion_actual   = 0;
+ 3a6:	10 92 0a 01 	sts	0x010A, r1	; 0x80010a <posicion_actual>
+    posicion_objetivo = 0;
+ 3aa:	10 92 09 01 	sts	0x0109, r1	; 0x800109 <posicion_objetivo>
+    estado_carrusel   = CARRUSEL_LISTO;
+ 3ae:	10 92 08 01 	sts	0x0108, r1	; 0x800108 <estado_carrusel>
+
+    registros_mcu3[REG_CMD] = CMD_NINGUNO;
+ 3b2:	10 92 11 01 	sts	0x0111, r1	; 0x800111 <registros_mcu3+0x6>
+
+    ActualizarRegistrosI2C();
+ 3b6:	0e 94 82 01 	call	0x304	; 0x304 <ActualizarRegistrosI2C>
+
+    sei();
+ 3ba:	78 94       	sei
+
+    while (1)
+    {
+        // Control del proceso de homing
+        if (estado_carrusel == CARRUSEL_HOMING)
+ 3bc:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <estado_carrusel>
+ 3c0:	82 30       	cpi	r24, 0x02	; 2
+ 3c2:	89 f4       	brne	.+34     	; 0x3e6 <main+0x56>
+        {
+            if (!(HOME_PIN_REG & (1 << HOME_BIT)))
+ 3c4:	4f 99       	sbic	0x09, 7	; 9
+ 3c6:	07 c0       	rjmp	.+14     	; 0x3d6 <main+0x46>
+            {
+                Stepper_Detener();
+ 3c8:	0e 94 50 02 	call	0x4a0	; 0x4a0 <Stepper_Detener>
+
+                posicion_actual = 0;
+ 3cc:	10 92 0a 01 	sts	0x010A, r1	; 0x80010a <posicion_actual>
+                estado_carrusel = CARRUSEL_LISTO;
+ 3d0:	10 92 08 01 	sts	0x0108, r1	; 0x800108 <estado_carrusel>
+ 3d4:	14 c0       	rjmp	.+40     	; 0x3fe <main+0x6e>
+            }
+            else if (!Stepper_EnMovimiento())
+ 3d6:	0e 94 40 02 	call	0x480	; 0x480 <Stepper_EnMovimiento>
+ 3da:	81 11       	cpse	r24, r1
+ 3dc:	10 c0       	rjmp	.+32     	; 0x3fe <main+0x6e>
+            {
+                // No se encontró la referencia dentro del límite de pasos
+                estado_carrusel = CARRUSEL_ERROR;
+ 3de:	83 e0       	ldi	r24, 0x03	; 3
+ 3e0:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <estado_carrusel>
+ 3e4:	0c c0       	rjmp	.+24     	; 0x3fe <main+0x6e>
+            }
+        }
+
+        // Verificar finalización de un movimiento normal
+        else if (estado_carrusel == CARRUSEL_MOVIENDO)
+ 3e6:	81 30       	cpi	r24, 0x01	; 1
+ 3e8:	51 f4       	brne	.+20     	; 0x3fe <main+0x6e>
+        {
+            if (!Stepper_EnMovimiento())
+ 3ea:	0e 94 40 02 	call	0x480	; 0x480 <Stepper_EnMovimiento>
+ 3ee:	81 11       	cpse	r24, r1
+ 3f0:	06 c0       	rjmp	.+12     	; 0x3fe <main+0x6e>
+            {
+                posicion_actual = posicion_objetivo;
+ 3f2:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <posicion_objetivo>
+ 3f6:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <posicion_actual>
+                estado_carrusel = CARRUSEL_LISTO;
+ 3fa:	10 92 08 01 	sts	0x0108, r1	; 0x800108 <estado_carrusel>
+            }
+        }
+
+        // Procesar órdenes recibidas desde el Master
+        ProcesarComandoMaster();
+ 3fe:	0e 94 b5 01 	call	0x36a	; 0x36a <ProcesarComandoMaster>
+
+        // Actualizar información disponible por I2C
+        ActualizarRegistrosI2C();
+ 402:	0e 94 82 01 	call	0x304	; 0x304 <ActualizarRegistrosI2C>
+    }
+ 406:	da cf       	rjmp	.-76     	; 0x3bc <main+0x2c>
+
+00000408 <Stepper_Init>:
+}
+
+int8_t Stepper_GetDireccion(void)
+{
+    return direccion_actual;
+}
+ 408:	8a b1       	in	r24, 0x0a	; 10
+ 40a:	80 61       	ori	r24, 0x10	; 16
+ 40c:	8a b9       	out	0x0a, r24	; 10
+ 40e:	8a b1       	in	r24, 0x0a	; 10
+ 410:	80 62       	ori	r24, 0x20	; 32
+ 412:	8a b9       	out	0x0a, r24	; 10
+ 414:	10 92 80 00 	sts	0x0080, r1	; 0x800080 <__TEXT_REGION_LENGTH__+0x7f8080>
+ 418:	8b e0       	ldi	r24, 0x0B	; 11
+ 41a:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7f8081>
+ 41e:	84 ef       	ldi	r24, 0xF4	; 244
+ 420:	91 e0       	ldi	r25, 0x01	; 1
+ 422:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7f8089>
+ 426:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7f8088>
+ 42a:	10 92 6f 00 	sts	0x006F, r1	; 0x80006f <__TEXT_REGION_LENGTH__+0x7f806f>
+ 42e:	08 95       	ret
+
+00000430 <Stepper_MoverPasos>:
+ 430:	61 15       	cp	r22, r1
+ 432:	71 05       	cpc	r23, r1
+ 434:	81 05       	cpc	r24, r1
+ 436:	91 05       	cpc	r25, r1
+ 438:	11 f1       	breq	.+68     	; 0x47e <Stepper_MoverPasos+0x4e>
+ 43a:	3c f0       	brlt	.+14     	; 0x44a <Stepper_MoverPasos+0x1a>
+ 43c:	21 e0       	ldi	r18, 0x01	; 1
+ 43e:	20 93 01 01 	sts	0x0101, r18	; 0x800101 <direccion_actual>
+ 442:	2b b1       	in	r18, 0x0b	; 11
+ 444:	20 62       	ori	r18, 0x20	; 32
+ 446:	2b b9       	out	0x0b, r18	; 11
+ 448:	0d c0       	rjmp	.+26     	; 0x464 <Stepper_MoverPasos+0x34>
+ 44a:	2f ef       	ldi	r18, 0xFF	; 255
+ 44c:	20 93 01 01 	sts	0x0101, r18	; 0x800101 <direccion_actual>
+ 450:	2b b1       	in	r18, 0x0b	; 11
+ 452:	2f 7d       	andi	r18, 0xDF	; 223
+ 454:	2b b9       	out	0x0b, r18	; 11
+ 456:	90 95       	com	r25
+ 458:	80 95       	com	r24
+ 45a:	70 95       	com	r23
+ 45c:	61 95       	neg	r22
+ 45e:	7f 4f       	sbci	r23, 0xFF	; 255
+ 460:	8f 4f       	sbci	r24, 0xFF	; 255
+ 462:	9f 4f       	sbci	r25, 0xFF	; 255
+ 464:	60 93 13 01 	sts	0x0113, r22	; 0x800113 <pasos_pendientes>
+ 468:	70 93 14 01 	sts	0x0114, r23	; 0x800114 <pasos_pendientes+0x1>
+ 46c:	80 93 15 01 	sts	0x0115, r24	; 0x800115 <pasos_pendientes+0x2>
+ 470:	90 93 16 01 	sts	0x0116, r25	; 0x800116 <pasos_pendientes+0x3>
+ 474:	ef e6       	ldi	r30, 0x6F	; 111
+ 476:	f0 e0       	ldi	r31, 0x00	; 0
+ 478:	80 81       	ld	r24, Z
+ 47a:	82 60       	ori	r24, 0x02	; 2
+ 47c:	80 83       	st	Z, r24
+ 47e:	08 95       	ret
+
+00000480 <Stepper_EnMovimiento>:
+ 480:	40 91 13 01 	lds	r20, 0x0113	; 0x800113 <pasos_pendientes>
+ 484:	50 91 14 01 	lds	r21, 0x0114	; 0x800114 <pasos_pendientes+0x1>
+ 488:	60 91 15 01 	lds	r22, 0x0115	; 0x800115 <pasos_pendientes+0x2>
+ 48c:	70 91 16 01 	lds	r23, 0x0116	; 0x800116 <pasos_pendientes+0x3>
+ 490:	81 e0       	ldi	r24, 0x01	; 1
+ 492:	14 16       	cp	r1, r20
+ 494:	15 06       	cpc	r1, r21
+ 496:	16 06       	cpc	r1, r22
+ 498:	17 06       	cpc	r1, r23
+ 49a:	0c f0       	brlt	.+2      	; 0x49e <Stepper_EnMovimiento+0x1e>
+ 49c:	80 e0       	ldi	r24, 0x00	; 0
+ 49e:	08 95       	ret
+
+000004a0 <Stepper_Detener>:
+ 4a0:	ef e6       	ldi	r30, 0x6F	; 111
+ 4a2:	f0 e0       	ldi	r31, 0x00	; 0
+ 4a4:	80 81       	ld	r24, Z
+ 4a6:	8d 7f       	andi	r24, 0xFD	; 253
+ 4a8:	80 83       	st	Z, r24
+ 4aa:	10 92 13 01 	sts	0x0113, r1	; 0x800113 <pasos_pendientes>
+ 4ae:	10 92 14 01 	sts	0x0114, r1	; 0x800114 <pasos_pendientes+0x1>
+ 4b2:	10 92 15 01 	sts	0x0115, r1	; 0x800115 <pasos_pendientes+0x2>
+ 4b6:	10 92 16 01 	sts	0x0116, r1	; 0x800116 <pasos_pendientes+0x3>
+ 4ba:	08 95       	ret
+
+000004bc <__vector_11>:
+
+ISR(TIMER1_COMPA_vect)
+{
+ 4bc:	1f 92       	push	r1
+ 4be:	0f 92       	push	r0
+ 4c0:	0f b6       	in	r0, 0x3f	; 63
+ 4c2:	0f 92       	push	r0
+ 4c4:	11 24       	eor	r1, r1
+ 4c6:	8f 93       	push	r24
+ 4c8:	9f 93       	push	r25
+ 4ca:	af 93       	push	r26
+ 4cc:	bf 93       	push	r27
+ 4ce:	ef 93       	push	r30
+ 4d0:	ff 93       	push	r31
+    STEPPER_CLK_PORT |= (1 << STEPPER_CLK_BIT);
+ 4d2:	8b b1       	in	r24, 0x0b	; 11
+ 4d4:	80 61       	ori	r24, 0x10	; 16
+ 4d6:	8b b9       	out	0x0b, r24	; 11
+	...
+    __asm__ __volatile__("nop\n\tnop\n\tnop\n\tnop");
+    STEPPER_CLK_PORT &= ~(1 << STEPPER_CLK_BIT);
+ 4e0:	8b b1       	in	r24, 0x0b	; 11
+ 4e2:	8f 7e       	andi	r24, 0xEF	; 239
+ 4e4:	8b b9       	out	0x0b, r24	; 11
+
+    if (pasos_pendientes > 0)
+ 4e6:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <pasos_pendientes>
+ 4ea:	90 91 14 01 	lds	r25, 0x0114	; 0x800114 <pasos_pendientes+0x1>
+ 4ee:	a0 91 15 01 	lds	r26, 0x0115	; 0x800115 <pasos_pendientes+0x2>
+ 4f2:	b0 91 16 01 	lds	r27, 0x0116	; 0x800116 <pasos_pendientes+0x3>
+ 4f6:	18 16       	cp	r1, r24
+ 4f8:	19 06       	cpc	r1, r25
+ 4fa:	1a 06       	cpc	r1, r26
+ 4fc:	1b 06       	cpc	r1, r27
+ 4fe:	9c f4       	brge	.+38     	; 0x526 <__vector_11+0x6a>
+    {
+        pasos_pendientes--;
+ 500:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <pasos_pendientes>
+ 504:	90 91 14 01 	lds	r25, 0x0114	; 0x800114 <pasos_pendientes+0x1>
+ 508:	a0 91 15 01 	lds	r26, 0x0115	; 0x800115 <pasos_pendientes+0x2>
+ 50c:	b0 91 16 01 	lds	r27, 0x0116	; 0x800116 <pasos_pendientes+0x3>
+ 510:	01 97       	sbiw	r24, 0x01	; 1
+ 512:	a1 09       	sbc	r26, r1
+ 514:	b1 09       	sbc	r27, r1
+ 516:	80 93 13 01 	sts	0x0113, r24	; 0x800113 <pasos_pendientes>
+ 51a:	90 93 14 01 	sts	0x0114, r25	; 0x800114 <pasos_pendientes+0x1>
+ 51e:	a0 93 15 01 	sts	0x0115, r26	; 0x800115 <pasos_pendientes+0x2>
+ 522:	b0 93 16 01 	sts	0x0116, r27	; 0x800116 <pasos_pendientes+0x3>
+    }
+
+    if (pasos_pendientes == 0)
+ 526:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <pasos_pendientes>
+ 52a:	90 91 14 01 	lds	r25, 0x0114	; 0x800114 <pasos_pendientes+0x1>
+ 52e:	a0 91 15 01 	lds	r26, 0x0115	; 0x800115 <pasos_pendientes+0x2>
+ 532:	b0 91 16 01 	lds	r27, 0x0116	; 0x800116 <pasos_pendientes+0x3>
+ 536:	89 2b       	or	r24, r25
+ 538:	8a 2b       	or	r24, r26
+ 53a:	8b 2b       	or	r24, r27
+ 53c:	29 f4       	brne	.+10     	; 0x548 <__vector_11+0x8c>
+    {
+        TIMSK1 &= ~(1 << OCIE1A);
+ 53e:	ef e6       	ldi	r30, 0x6F	; 111
+ 540:	f0 e0       	ldi	r31, 0x00	; 0
+ 542:	80 81       	ld	r24, Z
+ 544:	8d 7f       	andi	r24, 0xFD	; 253
+ 546:	80 83       	st	Z, r24
+    }
+ 548:	ff 91       	pop	r31
+ 54a:	ef 91       	pop	r30
+ 54c:	bf 91       	pop	r27
+ 54e:	af 91       	pop	r26
+ 550:	9f 91       	pop	r25
+ 552:	8f 91       	pop	r24
+ 554:	0f 90       	pop	r0
+ 556:	0f be       	out	0x3f, r0	; 63
+ 558:	0f 90       	pop	r0
+ 55a:	1f 90       	pop	r1
+ 55c:	18 95       	reti
+
+0000055e <__tablejump2__>:
+ 55e:	ee 0f       	add	r30, r30
+ 560:	ff 1f       	adc	r31, r31
+ 562:	05 90       	lpm	r0, Z+
+ 564:	f4 91       	lpm	r31, Z
+ 566:	e0 2d       	mov	r30, r0
+ 568:	09 94       	ijmp
+
+0000056a <__muluhisi3>:
+ 56a:	0e 94 c0 02 	call	0x580	; 0x580 <__umulhisi3>
+ 56e:	a5 9f       	mul	r26, r21
+ 570:	90 0d       	add	r25, r0
+ 572:	b4 9f       	mul	r27, r20
+ 574:	90 0d       	add	r25, r0
+ 576:	a4 9f       	mul	r26, r20
+ 578:	80 0d       	add	r24, r0
+ 57a:	91 1d       	adc	r25, r1
+ 57c:	11 24       	eor	r1, r1
+ 57e:	08 95       	ret
+
+00000580 <__umulhisi3>:
+ 580:	a2 9f       	mul	r26, r18
+ 582:	b0 01       	movw	r22, r0
+ 584:	b3 9f       	mul	r27, r19
+ 586:	c0 01       	movw	r24, r0
+ 588:	a3 9f       	mul	r26, r19
+ 58a:	70 0d       	add	r23, r0
+ 58c:	81 1d       	adc	r24, r1
+ 58e:	11 24       	eor	r1, r1
+ 590:	91 1d       	adc	r25, r1
+ 592:	b2 9f       	mul	r27, r18
+ 594:	70 0d       	add	r23, r0
+ 596:	81 1d       	adc	r24, r1
+ 598:	11 24       	eor	r1, r1
+ 59a:	91 1d       	adc	r25, r1
+ 59c:	08 95       	ret
+
+0000059e <_exit>:
+ 59e:	f8 94       	cli
+
+000005a0 <__stop_program>:
+ 5a0:	ff cf       	rjmp	.-2      	; 0x5a0 <__stop_program>
