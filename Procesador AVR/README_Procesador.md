@@ -185,7 +185,7 @@ Las contribuciones son bienvenidas. Algunas ideas para expandir el proyecto:
 
 ## Licencia
 
-Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+Este proyecto es de código abierto.
 
 ## Autor
 
